@@ -48,6 +48,9 @@ def main() :
 				output = output + char
 			
 			letter = ""
+	
+	if letter is not "" :
+		output = output + number_cypher(letter)
 
 	print(output)
 
