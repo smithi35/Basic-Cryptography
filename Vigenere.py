@@ -3,6 +3,7 @@ import fileinput
 import sys
 
 A = 65
+default = []
 
 def main() :
 	op = sys.argv[1]
@@ -36,40 +37,50 @@ def get_alphabets(key) :
 				letter = 65
 		
 		alphabets.append(current)
+		
+	for i in range(26) :
+		value = 65 + i
+		default.append(chr(value))
+	
 	return alphabets
 
 def encrypt(filename, key, alphabets) :
 	contents = get_contents(filename)
+	lines = get_lines(contents)
 
-	repeating = ""
-	index = 0
-	for i in range(len(contents)) :
-		char = contents[i]
-		
-		if (Letter.isLetter(char)) :
-			repeating = repeating + key[index % len(key)]
-			index = index + 1
-		else :
-			repeating = repeating + char
+	repeating = []
+	for line in lines :
+		index = 0
+		repeat_line = ""
+		for i in range(len(line)) :
+			char = contents[i]
+			
+			if (Letter.isLetter(char)) :
+				repeat_line = repeat_line + key[index % len(key)]
+				index = index + 1
+			else :
+				repeat_line = repeat_line + char
+		repeating.append(repeat_line)
 
 	output = ""
-	count = 0
-	for i in range(len(contents)) :
-		target_char = contents[i]
-		
-		if (Letter.isLetter(target_char)) :
-			target_value = Letter(target_char).get_value() -1
-			repeat_char = repeating[i]
-			repeat_value = Letter(repeat_char).get_value() -1
-			shift = ((target_value + repeat_value) % 26) + 65
-			out = chr(shift)
-			
-			output = output + out
-			count = count + 1
-			if count > len(alphabets)-1 :
-				count = 0
-		else :
-			output = output + target_char
+	for line in lines :
+		count = 0
+
+		for i in range(len(line)) :
+			target_char = line[i]
+
+			if (Letter.isLetter(target_char)) :
+				current_alphabet = alphabets[count]
+				index = find_in_alphabet(target_char, default)
+				out = current_alphabet[index]
+				
+				output = output + out
+				count = count + 1
+				if count > len(alphabets)-1 :
+					count = 0
+			else :
+				output = output + target_char
+		output = output + "\n"
 	
 	return output
 	
@@ -91,27 +102,26 @@ def decrypt(filename, key, alphabets) :
 	contents = get_contents(filename)
 	
 	# split contents by newline characters?
-	lines = contents.split("\n")
-	print(lines)
-	exit()
+	lines = get_lines(contents)
 	
 	output = ""
-	count = 0
-	for char in contents:
-		if (Letter.isLetter(char)):
-			current_alphabet = alphabets[count]
-			
-			repeat_value = find_in_alphabet(char, current_alphabet)
-			
-			char_value = 65 + repeat_value
-			output = output + chr(char_value)
-			
-			count = count + 1
-			if count > len(alphabets) -1:
-				count = 0
-		else:
-			output = output + char
-
+	for line in lines :
+		count = 0
+		for char in line :
+			if (Letter.isLetter(char)):
+				current_alphabet = alphabets[count]
+				
+				repeat_value = find_in_alphabet(char, current_alphabet)
+				
+				char_value = 65 + repeat_value
+				output = output + chr(char_value)
+				
+				count = count + 1
+				if count > len(alphabets) -1:
+					count = 0
+			else:
+				output = output + char
+		output = output + "\n"
 	return output
 
 def find_in_alphabet(letter, alphabet) :
@@ -121,10 +131,6 @@ def find_in_alphabet(letter, alphabet) :
 			out = i
 	
 	return out
-
-def get_mod(alphabet) :
-	mod = 0 + ord(alphabet[0]) - 65
-	return mod
 			
 def get_contents(filename) :
 	file = open(filename, "r")
@@ -138,7 +144,13 @@ def get_lines(string) :
 	output = string.split("\n")
 	
 	# remove lines that are just the empty string
-	
+	for i in range(len(output)) :
+		for j in range(len(output)) :
+			if output[j] is "" :
+				output.pop(j)
+				break
+
+	return output
 
 if len(sys.argv) is 4 :
 	main()
