@@ -13,7 +13,11 @@ def main() :
 	mod = -3
 	contents = caesar(contents, mod)
 	
-	print(contents)
+	file.close()
+	file = open("output.txt", "w")
+	file.write(contents)
+	file.close()
+	print("Decrypted contents sent to output.txt")
 
 def a1z26(contents) :
 	alphabet = ['A', 'B', 'C', 'D', 'E', 'F', 'G', 'H', 'I', 'J', 'K', 'L', 'M', 'N', 'O', 'P', 'Q', 'R', 'S', 'T', 'U', 'V', 'W', 'X', 'Y', 'Z']

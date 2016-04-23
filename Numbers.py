@@ -53,5 +53,10 @@ def main() :
 		output = output + number_cypher(letter)
 
 	print(output)
+	file.close()
+	
+	file = open("output.txt", "w")
+	file.write(output)
+	file.close()
 
 main()

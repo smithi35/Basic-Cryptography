@@ -9,6 +9,10 @@ def main() :
 	op = sys.argv[1]
 	filename = sys.argv[2]
 	key = str(sys.argv[3]).upper()
+	out_file = None
+	
+	if len(sys.argv) > 4 :
+		out_file = sys.argv[4]
 	
 	# should create an array of alphabets using the key
 	alphabets = get_alphabets(key)
@@ -16,12 +20,23 @@ def main() :
 	if op is "1" :
 		print("Decrypting contents of " + filename)
 		output = decrypt(filename, key, alphabets)
+		
+		if out_file is not None :
+			outfile = open(out_file, "w")
+			outfile.write(output)
+			outfile.close()
+		
 		print(output)
 	else :
 		print("Encrypting contents of " + filename)
-		# output = open("output.txt", "w")
-		output_string = encrypt(filename, key, alphabets)
-		print(output_string)
+		output = encrypt(filename, key, alphabets)
+		
+		if out_file is not None :
+			outfile = open(out_file, "w")
+			outfile.write(output)
+			outfile.close()
+		
+		print(output)
 
 def get_alphabets(key) :
 	alphabets = []
@@ -136,6 +151,7 @@ def get_contents(filename) :
 	file = open(filename, "r")
 	contents = file.read()
 	contents = contents.upper()
+	file.close()
 	
 	return contents
 
@@ -152,7 +168,7 @@ def get_lines(string) :
 
 	return output
 
-if len(sys.argv) is 4 :
+if len(sys.argv) >= 4 :
 	main()
 else :
 	print("Enter a file name and a key")

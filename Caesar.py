@@ -31,6 +31,9 @@ def main() :
 			output = output + char
 	
 	print(output)
+	file.close()
+	file = open("output.txt", "w")
+	file.write(output)
 
 # test()
 main()
