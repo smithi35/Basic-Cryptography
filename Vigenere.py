@@ -171,4 +171,4 @@ def get_lines(string) :
 if len(sys.argv) >= 4 :
 	main()
 else :
-	print("Enter a file name and a key")
+	print("To run this program, the additional command-line arguments are the operation: 1 to decrypt and anything else to encrypt; the source text file, the keyword, and an output file if one is desired.")
