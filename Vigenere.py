@@ -79,13 +79,28 @@ def decrypt(filename, key, alphabets) :
 	contents = get_contents(filename)
 	
 	output = ""
+	current_alphabet = 0
 	for char in contents:
 		if (Letter.isLetter(char)):
 			curr = Letter(char)
+			mod = get_mod(alphabets[current_alphabet])
+			
 			cyphered = caesar_cypher(curr, mod)
 			output = output + cyphered
+			
+			current_alphabet = current_alphabet + 1
+			
+			if current_alphabet > len(alphabets) :
+				current_alphabet = 0
 		else:
 			output = output + char
+
+# returns the difference between the current alphabet and the letter 'A'
+def get_mod(curr) :
+	start = ord(curr[0])
+	a = ord('A')
+	
+	return start - a
 
 def get_contents(filename) :
 	file = open(filename, "r")
@@ -97,4 +112,4 @@ def get_contents(filename) :
 if len(sys.argv) is 4 :
 	main()
 else :
-	print("Enter a file name and a key")
+	print("Enter an operation, file name, and a key")
