@@ -20,3 +20,7 @@ class Letter:
 			isL = True;
 		
 		return isL
+	
+	def to_string(self) :
+		output = self.letter + ", value: " + str(self.value)
+		return output
