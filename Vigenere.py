@@ -120,31 +120,6 @@ def decrypt(filename, key, alphabets) :
 	lines = get_lines(contents)
 	
 	output = ""
-<<<<<<< HEAD
-	current_alphabet = 0
-	for char in contents:
-		if (Letter.isLetter(char)):
-			curr = Letter(char)
-			mod = get_mod(alphabets[current_alphabet])
-			
-			cyphered = caesar_cypher(curr, mod)
-			output = output + cyphered
-			
-			current_alphabet = current_alphabet + 1
-			
-			if current_alphabet > len(alphabets) :
-				current_alphabet = 0
-		else:
-			output = output + char
-
-# returns the difference between the current alphabet and the letter 'A'
-def get_mod(curr) :
-	start = ord(curr[0])
-	a = ord('A')
-	
-	return start - a
-
-=======
 	for line in lines :
 		count = 0
 		for char in line :
@@ -172,7 +147,6 @@ def find_in_alphabet(letter, alphabet) :
 	
 	return out
 			
->>>>>>> 56ce11d336e78d9308f33889e59fd50b356c651b
 def get_contents(filename) :
 	file = open(filename, "r")
 	contents = file.read()
@@ -197,8 +171,5 @@ def get_lines(string) :
 if len(sys.argv) >= 4 :
 	main()
 else :
-<<<<<<< HEAD
 	print("Enter an operation, file name, and a key")
-=======
 	print("To run this program, the additional command-line arguments are the operation: 1 to decrypt and anything else to encrypt; the source text file, the keyword, and an output file if one is desired.")
->>>>>>> 56ce11d336e78d9308f33889e59fd50b356c651b
