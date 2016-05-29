@@ -14,6 +14,7 @@ using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
 using Cryptography.Business;
+using System.Diagnostics;
 
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=391641
 
@@ -54,22 +55,66 @@ namespace Cryptography
 
         public void caesar(object sender, RoutedEventArgs e)
         {
-            
+            var offset = key.Text;
+            var crypt = textBox.Text;
+            Debug.WriteLine("offset = {0}, text = {1}", offset, crypt);
+
+            try
+            {
+                int numberOffset = int.Parse(offset);
+
+                Caesar cipher = new Caesar
+                {
+                    Offset = numberOffset,
+                    Input = crypt
+                };
+
+                var output = cipher.Caesar_Cipher();
+                textBox.Text = output;
+            }
+            catch (FormatException)
+            {
+                key.Text = "Offset must be an integer";
+            }
         }
 
         public void atbash(object sender, RoutedEventArgs e)
         {
+            var crypt = textBox.Text;
+            Debug.WriteLine("text = {0}", crypt);
 
+            Atbash cipher = new Atbash
+            {
+                Input = crypt
+            };
+            textBox.Text = cipher.AtbashCipher();
         }
 
         public void a1z26(object sender, RoutedEventArgs e)
         {
+            var crypt = textBox.Text;
+            Debug.WriteLine("text = {0}", crypt);
 
+            A1Z26 cipher = new A1Z26
+            {
+                Input = crypt
+            };
+            textBox.Text = cipher.A1Z26Cipher();
         }
 
+        //TODO: Encrypting or Decrypting!
         public void vigenere(object sender, RoutedEventArgs e)
         {
+            var vigenere = key.Text;
+            var crypt = textBox.Text;
+            Debug.WriteLine("offset = {0}, text = {1}", vigenere, crypt);
 
+            Vigenere cipher = new Vigenere
+            {
+                Input = crypt,
+                Key = vigenere
+            };
+            textBox.Text = cipher.VigenereCipher();
         }
     }
 }
