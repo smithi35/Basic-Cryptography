@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -25,6 +26,13 @@ namespace Ciphers
         public MainPage()
         {
             this.InitializeComponent();
+            Caesar.Click += caesar_click;
+        }
+
+        public void caesar_click(object sender, RoutedEventArgs e)
+        {
+            Debug.WriteLine("Navigating to Caesar page.");
+            this.Frame.Navigate(typeof(Caesar));
         }
     }
 }
