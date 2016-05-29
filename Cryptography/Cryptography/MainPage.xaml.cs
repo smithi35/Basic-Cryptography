@@ -13,6 +13,8 @@ using Windows.UI.Xaml.Input;
 using Windows.UI.Xaml.Media;
 using Windows.UI.Xaml.Navigation;
 
+using Cryptography.Business;
+
 // The Blank Page item template is documented at http://go.microsoft.com/fwlink/?LinkId=391641
 
 namespace Cryptography
@@ -28,7 +30,10 @@ namespace Cryptography
 
             this.NavigationCacheMode = NavigationCacheMode.Required;
 
-            Caesar.Click += caesar_click;
+            Caesar.Click += caesar;
+            Atbash.Click += atbash;
+            A1Z26.Click += a1z26;
+            Vigenere.Click += vigenere;
         }
 
         /// <summary>
@@ -47,9 +52,24 @@ namespace Cryptography
             // this event is handled for you.
         }
 
-        public void caesar_click(object sender, RoutedEventArgs e)
+        public void caesar(object sender, RoutedEventArgs e)
         {
             
+        }
+
+        public void atbash(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        public void a1z26(object sender, RoutedEventArgs e)
+        {
+
+        }
+
+        public void vigenere(object sender, RoutedEventArgs e)
+        {
+
         }
     }
 }

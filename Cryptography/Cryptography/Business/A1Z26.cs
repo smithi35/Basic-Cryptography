@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace Cryptography.Business
 {
-    class Caesar
+    class A1Z26
     {
-        public int Offset { get; set; }
         public string Input { get; set; }
 
-        public string Caesar_Cipher()
+        public string A1Z26Cipher()
         {
             return "";
         }

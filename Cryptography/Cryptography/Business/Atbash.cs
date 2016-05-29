@@ -6,12 +6,11 @@ using System.Threading.Tasks;
 
 namespace Cryptography.Business
 {
-    class Caesar
+    class Atbash
     {
-        public int Offset { get; set; }
         public string Input { get; set; }
 
-        public string Caesar_Cipher()
+        public string AtbashCipher()
         {
             return "";
         }
