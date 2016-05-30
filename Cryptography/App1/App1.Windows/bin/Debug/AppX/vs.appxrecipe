@@ -1,0 +1,72 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="4.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <Machine>IANSMITH-PC</Machine>
+    <WindowsUser>Ian Smith</WindowsUser>
+    <TargetPlatformIdentifier>Windows</TargetPlatformIdentifier>
+    <TargetOsVersion>6.3</TargetOsVersion>
+    <TargetOsDescription>Windows 8.1</TargetOsDescription>
+    <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
+    <PackageArchitecture>neutral</PackageArchitecture>
+    <PackageIdentityName>b919ddb8-23d2-433c-9f03-929f6db77e34</PackageIdentityName>
+    <IntermediateOutputPath>C:\Users\Ian Smith\Documents\Crypto\Cryptography\App1\App1.Windows\obj\Debug\</IntermediateOutputPath>
+    <RegisteredManifestChecksum>478FB05C147403AD29B90686A795F6ED0CFB2F4EEA00E3C927793E512ED78F15</RegisteredManifestChecksum>
+    <RegisteredPackageMoniker>b919ddb8-23d2-433c-9f03-929f6db77e34_1.0.0.0_neutral__3jfjghwqqeqfe</RegisteredPackageMoniker>
+    <RegisteredUserModeAppID>b919ddb8-23d2-433c-9f03-929f6db77e34_3jfjghwqqeqfe!App</RegisteredUserModeAppID>
+    <RegisteredPackageID>b919ddb8-23d2-433c-9f03-929f6db77e34</RegisteredPackageID>
+    <RegisteredPackagePublisher>CN=Ian Smith</RegisteredPackagePublisher>
+    <RegisteredVersion>1.0.0.0</RegisteredVersion>
+    <JitOptimizationSuppressed>True</JitOptimizationSuppressed>
+  </PropertyGroup>
+  <ItemGroup>
+    <AppXManifest Include="C:\Users\Ian Smith\Documents\Crypto\Cryptography\App1\App1.Windows\bin\Debug\AppxManifest.xml">
+      <PackagePath>AppxManifest.xml</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2016-05-30T02:04:40.493</Modified>
+    </AppXManifest>
+  </ItemGroup>
+  <ItemGroup>
+    <AppxPackagedFile Include="C:\Users\Ian Smith\Documents\Crypto\Cryptography\App1\App1.Windows\bin\Debug\App1.Windows.exe">
+      <PackagePath>App1.Windows.exe</PackagePath>
+      <Modified>2016-05-30T02:04:39.897</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ian Smith\Documents\Crypto\Cryptography\App1\App1.Windows\Assets\Logo.scale-100.png">
+      <PackagePath>Assets\Logo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-07-07T04:01:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ian Smith\Documents\Crypto\Cryptography\App1\App1.Windows\Assets\SmallLogo.scale-100.png">
+      <PackagePath>Assets\SmallLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-07-07T04:01:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ian Smith\Documents\Crypto\Cryptography\App1\App1.Windows\Assets\SplashScreen.scale-100.png">
+      <PackagePath>Assets\SplashScreen.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-07-07T04:01:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ian Smith\Documents\Crypto\Cryptography\App1\App1.Windows\Assets\StoreLogo.scale-100.png">
+      <PackagePath>Assets\StoreLogo.scale-100.png</PackagePath>
+      <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+      <Modified>2015-07-07T04:01:10.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ian Smith\Documents\Crypto\Cryptography\App1\App1.Windows\bin\Debug\App1.Windows.xr.xml">
+      <PackagePath>App1.Windows.xr.xml</PackagePath>
+      <Modified>2016-05-30T02:04:39.767</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ian Smith\Documents\Crypto\Cryptography\App1\App1.Windows\bin\Debug\App.xbf">
+      <PackagePath>App.xbf</PackagePath>
+      <Modified>2016-05-30T02:04:39.839</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ian Smith\Documents\Crypto\Cryptography\App1\App1.Windows\bin\Debug\MainPage.xbf">
+      <PackagePath>MainPage.xbf</PackagePath>
+      <Modified>2016-05-30T02:04:39.839</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Ian Smith\Documents\Crypto\Cryptography\App1\App1.Windows\bin\Debug\resources.pri">
+      <PackagePath>resources.pri</PackagePath>
+      <Modified>2016-05-30T02:04:40.245</Modified>
+    </AppxPackagedFile>
+  </ItemGroup>
+  <ItemGroup>
+  </ItemGroup>
+</Project>
