@@ -1,0 +1,20 @@
+﻿<Page
+    x:Class="Caesar.MainPage"
+    xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+    xmlns:local="using:Caesar"
+    xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+    xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+    mc:Ignorable="d"
+    Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
+
+    <Grid>
+        <TextBox x:Name="Offset" Text="0" HorizontalAlignment="Left" Margin="10,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="34" TextAlignment="Left" Width="380"/>
+        <TextBox x:Name="Textbox" Text="" HorizontalAlignment="Left" Margin="10,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="450" Width="380"/>
+        <Button x:Name="Encode" Content="Encode" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,569,0,0" Height="70" Width="185"/>
+        <Button x:Name="Decode" Content="Decode" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="200,569,0,0" Height="70" Width="190"/>
+        <TextBlock x:Name="Title" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Caesar Cipher" VerticalAlignment="Top" Height="44" Width="390" TextAlignment="Center" FontSize="30"/>
+
+    </Grid>
+</Page>
+
