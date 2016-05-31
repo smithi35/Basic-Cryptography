@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Diagnostics;
 using System.IO;
 using System.Linq;
 using System.Runtime.InteropServices.WindowsRuntime;
@@ -50,18 +51,19 @@ namespace A1Z26
 
         public void encode(object o, RoutedEventArgs e)
         {
-            string input = Text.Text;
+            string input = InputText.Text;
             A1Z26 cipher = new A1Z26 { Input = input };
             string output = cipher.Encode();
-            Text.Text = output;
+            InputText.Text = output;
         }
 
         public void decode(object o, RoutedEventArgs e)
         {
-            string input = Text.Text;
+            string input = InputText.Text;
             A1Z26 cipher = new A1Z26 { Input = input };
             string output = cipher.Decode();
-            Text.Text = output;
+            Debug.WriteLine(output);
+            InputText.Text = output;
         }
     }
 }

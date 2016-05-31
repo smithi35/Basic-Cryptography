@@ -12,6 +12,6 @@
         <Button x:Name="Encode" Content="Encode" HorizontalAlignment="Left" VerticalAlignment="Bottom" Height="71" Width="195" Margin="10,0,0,0"/>
         <Button x:Name="Decode" Content="Decode" HorizontalAlignment="Right" VerticalAlignment="Bottom" Height="71" Width="180" Margin="0,0,10,0"/>
         <TextBlock x:Name="Title" HorizontalAlignment="Left" TextWrapping="Wrap" Text="A1Z26 Cipher" VerticalAlignment="Top" Height="33" Width="390" FontSize="30" TextAlignment="Center"/>
-        <TextBox x:Name="Text" HorizontalAlignment="Left" Margin="0,74,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="469" Width="390"/>
+        <TextBox x:Name="InputText" HorizontalAlignment="Left" Margin="0,74,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Height="469" Width="390"/>
     </Grid>
 </Page>
