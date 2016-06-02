@@ -11,12 +11,9 @@ namespace Vigenere
     {
         private List<List<char>> Alphabets;
         private List<char> Default;
-        private string Key;
-
-        public string GetKey()
-        {
-            return Key;
-        }
+        
+        public string Key { get; set; }
+        
         public void SetKey(string value)
         {
             Debug.WriteLine(value);
@@ -28,7 +25,7 @@ namespace Vigenere
             foreach (char letter in temp)
             {
                 Debug.WriteLine("Letter = " + letter);
-                if (letter >= 'A' || letter <= 'Z')
+                if (letter >= 'A' && letter <= 'Z')
                 {
                     key = key + letter;
                 }

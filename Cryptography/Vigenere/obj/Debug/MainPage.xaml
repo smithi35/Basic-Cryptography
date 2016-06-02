@@ -8,12 +8,17 @@
     mc:Ignorable="d"
     Background="{ThemeResource ApplicationPageBackgroundThemeBrush}">
 
-    <Grid>
-        <TextBox x:Name="Key" Text="Key" HorizontalAlignment="Left" Margin="10,49,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="34" TextAlignment="Left" Width="380"/>
-        <TextBox x:Name="Textbox" Text="PVREK BIG QF. JCDQZRF' ZNVEFH OBCX: C BEWRS VVUTBFL BT BKNX CVAY BKNX CVAY BKNX" HorizontalAlignment="Left" Margin="10,88,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="450" Width="380"/>
-        <Button x:Name="Encode" Content="Encode" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,569,0,0" Height="70" Width="185"/>
-        <Button x:Name="Decode" Content="Decode" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="200,569,0,0" Height="70" Width="190"/>
-        <TextBlock x:Name="Title" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Vigenere Cipher" VerticalAlignment="Top" Height="44" Width="390" TextAlignment="Center" FontSize="30"/>
+    <Grid Margin="0,0.333,0,-0.333">
+
+        <Grid.ColumnDefinitions>
+        </Grid.ColumnDefinitions>
+        
+        <TextBox x:Name="Key" PlaceholderText="Key" HorizontalAlignment="Left" Margin="10,53,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="25" TextAlignment="Left" Width="370"/>
+        <TextBox x:Name="Textbox" HorizontalAlignment="Left" Margin="10,112,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Height="442" Width="380"/>
+        <Button x:Name="Encode" Content="Encode" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="10,0,0,0" Height="76" Width="190"/>
+        <Button x:Name="Decode" Content="Decode" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="200,0,0,0" Height="76" Width="190"/>
+        <TextBlock x:Name="Title" HorizontalAlignment="Center" TextWrapping="Wrap" Text="Vigenere Cipher" VerticalAlignment="Top" Height="43" Width="240" TextAlignment="Center" FontSize="30" Margin="80,10,80,0"/>
+        
     </Grid>
 </Page>
 

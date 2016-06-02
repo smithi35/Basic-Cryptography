@@ -8,7 +8,7 @@
     <TargetOsDescription>Windows Phone 8.1</TargetOsDescription>
     <SolutionConfiguration>Debug|AnyCPU</SolutionConfiguration>
     <PackageArchitecture>neutral</PackageArchitecture>
-    <PackageIdentityName>f76e5418-1013-4adf-902c-17a28b79f840</PackageIdentityName>
+    <PackageIdentityName>120c38e5-f35c-4d1f-a6d6-39d21377603b</PackageIdentityName>
     <IntermediateOutputPath>C:\Users\Ian Smith\Documents\Crypto\Cryptography\Vigenere\obj\Debug\</IntermediateOutputPath>
   </PropertyGroup>
   <ItemGroup>
